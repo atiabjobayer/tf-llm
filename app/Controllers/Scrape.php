@@ -166,6 +166,10 @@ class Scrape extends BaseController
 
 //				var_dump($issueComments);
 
+				if(sizeof($issueComments) < 1){
+					$jsonLines[] = "There are no comments in the issue #{$issueNumber}.";
+				}
+
 				foreach ($issueComments as $issueComment){
 					$jsonLines[] = "Comment on Issue #{$issueNumber} {$issue['title']} by {$issueComment['user']['login']} : {$issueComment['body']}";
 				}

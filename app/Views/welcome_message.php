@@ -101,7 +101,7 @@
 						console.log(data);
 						var btn = document.getElementById("scrape_btn");
 
-						btn.disabled = true;
+						btn.disabled = false;
 						btn.innerHTML = "Scrape";
 					}
 				});

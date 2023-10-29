@@ -16,6 +16,8 @@ class Hook extends BaseController
 	public function postIndex() {
 		$payload = json_encode($this->request->getVar());
 
+		log_message('error', $payload);
+
 		$data = json_decode($payload, true);
 
 		$repoName = $data['repository']['name'];

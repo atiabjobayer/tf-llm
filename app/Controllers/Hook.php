@@ -25,5 +25,7 @@ class Hook extends BaseController
 			'export BASE_URL=' . escapeshellarg(base_url()) . '; ' .
 			'php ' . escapeshellarg(FCPATH . 'index.php') . " scrape $repoName $ownerName"
 		);
+
+		echo "Received webhook data";
 	}
 }

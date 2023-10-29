@@ -8,16 +8,13 @@ use GuzzleHttp\Exception\GuzzleException;
 
 class Scrape extends BaseController
 {
-	public function cliIndex(){
-		$this->getIndex();
+	public function cliIndex($author, $repo){
+		$this->getIndex($author, $repo);
 	}
 
-	public function getIndex()
+	public function getIndex($author, $repo)
 	{
 		$accessToken = env('GH_ACCESS_TOKEN');
-
-		$author = "rahul-bangar";
-		$repo = "Transfinitte_App";
 
 		$client = new Client();
 

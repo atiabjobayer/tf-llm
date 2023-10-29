@@ -16,7 +16,7 @@ class Scrape extends BaseController
 	{
 		$accessToken = env('GH_ACCESS_TOKEN');
 
-		cache()->save('scrape_repo_author', $author, 3600);
+		cache()->save('scrape_repo_owner', $author, 3600);
 		cache()->save('scrape_repo_name', $repo, 3600);
 
 		$client = new Client();

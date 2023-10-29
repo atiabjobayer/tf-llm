@@ -20,8 +20,8 @@ class Hook extends BaseController
 
 		$data = json_decode($payload, true);
 
-		$repoName = cache('scrape_repo_name');
 		$ownerName = cache('scrape_repo_owner');
+		$repoName = cache('scrape_repo_name');
 
 //		echo $repoName . " " . $ownerName;
 

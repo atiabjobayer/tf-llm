@@ -14,13 +14,16 @@ class Hook extends BaseController
 	}
 
 	public function postIndex() {
-		$payload = json_encode($this->request->getVar());
+		$payload = $this->request->getVar();
 
-		echo $payload;
+		$data = json_decode($payload, true);
+
+		$repoName = $data['repository']['name'];
+		$ownerName = $data['repository']['owner']['login'];
 
 		shell_exec(
 			'export BASE_URL=' . escapeshellarg(base_url()) . '; ' .
-			'php ' . escapeshellarg(FCPATH . 'index.php') . " scrape "
+			'php ' . escapeshellarg(FCPATH . 'index.php') . " scrape $repoName $ownerName"
 		);
 	}
 }

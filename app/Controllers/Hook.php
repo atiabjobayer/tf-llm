@@ -21,9 +21,11 @@ class Hook extends BaseController
 		$repoName = $data['repository']['name'];
 		$ownerName = $data['repository']['owner']['login'];
 
+		echo $repoName . " " . $ownerName;
+
 		shell_exec(
 			'export BASE_URL=' . escapeshellarg(base_url()) . '; ' .
-			'php ' . escapeshellarg(FCPATH . 'index.php') . " scrape $repoName $ownerName"
+			'php ' . escapeshellarg(FCPATH . 'index.php') . " scrape $ownerName $repoName"
 		);
 
 		echo "Received webhook data";

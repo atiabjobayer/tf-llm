@@ -98,6 +98,7 @@
 						btn.disabled = true;
 					},
 					success: function (data) {
+						console.log(data);
 						var btn = document.getElementById("scrape_btn");
 
 						btn.disabled = true;

@@ -61,8 +61,8 @@
 	<h2 style="margin-left: 0">Team 404</h2>
 	<br><br>
 	<h4 style="margin-left: 0">Repository Link</h4>
-	<div class="input-control info text full-size">
-		<input type="text" name="repolink" id="repolink">
+	<div class="input-control text full-size">
+		<input type="text" name="repolink" id="repolink" style="background-color: #262730; border: 1px solid white; color: white">
 	</div>
 	<br><br>
 	<button class="button" onclick="sendScrapeRequest()" id="scrape_btn">Scrape</button>
